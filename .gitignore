@@ -1,0 +1,17 @@
+# Maven target directory
+/target/
+
+# IDE files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Docker artifacts
+Dockerfile
+*.dockerignore
+
+# Build outputs
+*.class
+*.jar
+*.war
