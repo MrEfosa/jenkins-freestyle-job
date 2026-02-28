@@ -2,20 +2,36 @@
 
 ## Project Overview
 
-This project is a comprehensive guide to implementing a CI/CD (Continuous Integration/Continuous Deployment) pipeline using Jenkins, specifically focusing on UI-based freestyle jobs within a Dockerized DevOps environment.
+This project demonstrates the use of Jenkins Freestyle Job for Continuous Integration and Continuous Deployment (CI/CD) using Docker, Maven, and DigitalOcean for infrastructure management.
 
-### Key Features
+### Key Components:
+- **Jenkins:** An open-source automation server that helps automate the parts of software development related to building, testing, and deploying.
+- **Docker:** A platform designed to make it easier to create, deploy, and run applications by using containers.
+- **Maven:** A build automation tool primarily used for Java projects.
+- **DigitalOcean:** A cloud infrastructure provider allowing developers to deploy, manage, and scale applications easily.
 
-- **UI-Based Freestyle Jobs**: This project leverages Jenkins' intuitive UI for creating and managing freestyle jobs, making it accessible to users with varying levels of experience in CI/CD practices.
+### Project Structure:
+- `Dockerfile`: Contains instructions for creating a Docker image for the application.
+- `Jenkinsfile`: Defines the pipeline for CI/CD in Jenkins.
+- `pom.xml`: Maven configuration file that contains project dependencies and configurations.
+- Source code directory: Contains the application source code.
 
-- **Docker Containerization**: The project showcases how to containerize applications using Docker, ensuring consistent environments from development through production. This approach minimizes the "it works on my machine" problem.
+### Getting Started:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MrEfosa/jenkins-freestyle-job.git
+   ```
+2. Build the Docker image from the Dockerfile:
+   ```bash
+   docker build -t my-app .
+   ```
+3. Run the Jenkins server using Docker:
+   ```bash
+   docker run -d -p 8080:8080 jenkins/jenkins:lts
+   ```
+4. Create a Freestyle job in Jenkins and link it to the GitHub repository.
+5. Configure the Maven build step and build the project.
+6. Deploy to DigitalOcean using the deployed artifacts.
 
-- **Manual Setup**: In addition to automated setups, this project provides detailed instructions for manually setting up Jenkins and the necessary configurations for freestyle jobs, catering to users who prefer a hands-on approach.
-
-### Getting Started
-
-To get started with this project, follow the setup instructions outlined in this repository. Ensure you have Docker installed and are familiar with basic Jenkins operations. 
-
----
-
-For further details, feel free to check the individual job configurations and the related documentation within this repository.
+### Conclusion:
+This project serves as a reference for setting up a CI/CD pipeline using Jenkins Freestyle Job and showcases the integration of important tools such as Docker, Maven, and cloud infrastructure on DigitalOcean.
