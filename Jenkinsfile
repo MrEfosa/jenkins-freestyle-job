@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    parameters{
-        choice(name: 'VERSION', choices: ['1.1', '1.2', '1.3], defaultvalue: '')
+    parameters {
+       choice(name: 'VERSION', choices: ['1.1', '1.2', '1.3], defaultValue: '')
     }
     stages {
         stage('Build') {
